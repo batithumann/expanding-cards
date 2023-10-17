@@ -9,6 +9,26 @@
 
 <body>
     <style>
+        body {
+            font-family: 'Muli', sans-serif;
+        }
+
+        a {
+            position: absolute;
+            bottom: 3em;
+            left: 3em;
+            visibility: hidden;
+            opacity: 0;
+            color: #fff;
+            text-decoration: none;
+            font-size: large;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
         .container {
             display: flex;
             width: 90vw;
@@ -16,6 +36,9 @@
         }
 
         .panel {
+            position: relative;
+            color: #fff;
+            padding: 2em;
             margin: 1em;
             flex: 0.5;
             height: 80vh;
@@ -24,30 +47,43 @@
             background-position: center;
             border-radius: 50px;
             cursor: pointer;
-            transition: flex 0.7s;
-            transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94)
+            transition: flex 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         .active {
             flex: 5;
         }
+
+        .panel.active a {
+            visibility: visible;
+            opacity: 1;
+            transition: all 0.3s ease-in 0.4s;
+        }
     </style>
 
     <div class="container">
-        <div class="panel"
-            style="background-image: url('https://images.unsplash.com/photo-1696537973805-ea909916ae34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');">
+        <div class="panel active"
+            style="background-image: url('https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');">
+            <a target="_blank" href="https://unsplash.com/photos/L-2p8fapOA8">brown turtle swimming underwater</a>
         </div>
         <div class="panel"
-            style="background-image: url('https://images.unsplash.com/photo-1695891957303-b65ece769f11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');">
+            style="background-image: url('https://plus.unsplash.com/premium_photo-1673641895483-2119e6d9fd75?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');">
+            <a target="_blank" href="https://unsplash.com/photos/a-close-up-of-a-cat-with-green-eyes-k48uqoncP3s">a
+                close up of a cat
+                with green eyes</a>
         </div>
         <div class="panel"
-            style="background-image: url('https://images.unsplash.com/photo-1696757020926-d627b01c41cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');">
+            style="background-image: url('https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');">
+            <a target="_blank" href="https://unsplash.com/photos/_9a-3NO5KJE">panda eating bamboo</a>
         </div>
         <div class="panel"
-            style="background-image: url('https://images.unsplash.com/photo-1697126790557-472b2c3dd342?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');">
+            style="background-image: url('https://images.unsplash.com/photo-1486578077620-8a022ddd481f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');">
+            <a target="_blank" href="https://unsplash.com/photos/CS5vT_Kin3E">hawk</a>
         </div>
         <div class="panel"
-            style="background-image: url('https://images.unsplash.com/photo-1696362400167-0af7071b500c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');">
+            style="background-image: url('https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');">
+            <a target="_blank" href="https://unsplash.com/photos/BuQ1RZckYW4">two elephants walking on grass covered
+                ground</a>
         </div>
     </div>
 
